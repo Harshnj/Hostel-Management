@@ -1,0 +1,184 @@
+<html lang="en">
+
+<head>
+	<%-include("../Homepage/Header") -%> 
+
+	<link rel="stylesheet" href="/css/navandside.css">
+</head>
+
+<body>
+	<%-include("../Homepage/Nav") -%> 
+	<div>
+    <%-include("../Homepage/sidebar")-%>
+    </div>
+        <h1>Student Registaration Form</h1>
+        
+        <div class="container">
+         <form action="/register" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-10">
+                    <label for="srno">SR number:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="srno" name="srno" placeholder="Enter your sr number" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="usn">USN:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="usn" name="usn" placeholder="Enter your usn">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="usn">First name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="fname" name="firstname" placeholder="Enter your firstname">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="usn">last name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="lname" name="lastname" placeholder="Enter your lastname">
+                </div>
+            </div>
+      
+            <div class="row">
+                <div class="col-10">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-90">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,.">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="mobile" name="mobilenum" placeholder="only 10 digits are allowed">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="col-90">
+                    <input type="Date" id="dob" name="dob">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="qualification" required >Course:</label>
+                </div>
+                <div class="col-90">
+                    <select name="course" id="qualification">
+                        <option value=" ">Select course</option>
+                        <!-- <option value="Graduation">Graduation</option> -->
+                        <option value="BTech.">BTech.</option>
+                        <option value="MTech.">MTech.</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BCA">BCA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="srno">Branch:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="branch" name="branch" placeholder="Enter your branch">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="srno">Semester:</label>
+                </div>
+                <div class="col-90">
+                    <input type="number" id="sem" name="sem" placeholder="Enter your Semester">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">State:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="city" name="state" maxlength="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">Country:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="city" name="country" maxlength="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-90">
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="srno">Father Name</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="fathername" name="father_name" placeholder="Enter your father name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="srno">Mother Name</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="mothername" name="mother_name" placeholder="Enter your mother name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile"> Parent's  Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="fmobile" name="parentnum" placeholder="only 10 digits are allowed">
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mother Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">
+                </div>
+            </div> -->
+             <div class="row">
+                <label for="formFile" class="form-label">Choose a profile photo</label>
+                <input class="form-control" type="file" id="formFile" name="profileimage">
+              </div>
+          
+        
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password" id="password" name="password" >
+                </div>
+            </div>
+                <button type="submit">Submit</button>
+ 
+          </form> 
+        </div>  
+		<!-- <script type="text/javascript" lang="javascript" src="regscript.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+</html>
